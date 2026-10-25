@@ -1,65 +1,195 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Артур — частный авитолог. Продвижение бизнеса на Авито и настройка ИИ-ассистентов для обработки обращений.">
-  <title>Артур — продвижение на Авито и ИИ-ассистенты</title>
+  <meta name="description" content="ИИ-решения — учебный сайт услуг по созданию голосовых ИИ-агентов и диалоговых ИИ-ассистентов для бизнеса.">
+  <meta name="color-scheme" content="dark light">
+  <title>ИИ-решения — ИИ-агенты для вашего бизнеса</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
 <body>
-  <header class="header">
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.5 13A8.5 8.5 0 0 1 11 3.5 8.5 8.5 0 1 0 20.5 13Z"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M6 10v2a6 6 0 0 0 12 0v-2m-6 8v3m-3 0h6"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 15a3 3 0 0 1-3 3H8l-5 3V6a3 3 0 0 1 3-3h11a3 3 0 0 1 3 3Z"/><path d="M7 8h9M7 12h6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="m8 3 3 5-3 2a13 13 0 0 0 6 6l2-3 5 3-1 4c-1 3-7 0-11-4S1 6 4 4Z"/></symbol>
+    <symbol id="i-missed" viewBox="0 0 24 24"><path d="m8 3 3 5-3 2a13 13 0 0 0 6 6l2-3 5 3-1 4c-1 3-7 0-11-4S1 6 4 4m11-1 6 6m0-6-6 6"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-team" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><path d="M3 20v-3a6 6 0 0 1 12 0v3M16 4a3 3 0 0 1 0 6m2 4a5 5 0 0 1 3 5v1"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 3v17h17M8 15l4-5 4 2 5-7"/></symbol>
+    <symbol id="i-expand" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M3 3l6 6m12-6-6 6M3 21l6-6m12 6-6-6"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></symbol>
+    <symbol id="i-build" viewBox="0 0 24 24"><path d="m15 3 6 6M3 21l9-9m-4 4-3-3M12 5l7 7m-8-6 3-3 7 7-3 3"/></symbol>
+    <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M9 15c-2-7 4-12 12-12 0 8-5 14-12 12Zm0 0-3 3m7-12-7 1-3 5 6 1m9-2-1 7-5 3-1-6M4 17l-1 4 4-1"/><circle cx="16" cy="8" r="1.5"/></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4M6 10h3l2-3 3 6 2-3h2"/></symbol>
+    <symbol id="i-headset" viewBox="0 0 24 24"><path d="M4 14v-3a8 8 0 0 1 16 0v3M20 17v2a3 3 0 0 1-3 3h-3"/><rect x="2" y="11" width="5" height="8" rx="2"/><rect x="17" y="11" width="5" height="8" rx="2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 2 8 3v7c0 5-8 10-8 10S4 17 4 12V5Z"/><path d="m8 12 3 3 5-6"/></symbol>
+  </svg>
+
+  <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#home" aria-label="Артур — на главную">артур<span class="brand-dot">.</span><small>авитолог / ИИ</small></a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Открыть меню"><span></span><span></span></button>
-      <nav id="navigation" class="navigation" aria-label="Основная навигация">
-        <a href="#services">Услуги</a><a href="#pricing">Тарифы</a><a href="#process">Как работаю</a><a href="#cases">Кейсы</a><a class="nav-contact" href="#contacts">Обсудить проект <span aria-hidden="true">↗</span></a>
+      <a class="logo" href="index.html" aria-label="ИИ-решения — главная">ИИ-решения<img src="assets/logo-mark.svg" alt="" width="40" height="36"></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-navigation" type="button"><span></span><span></span><span class="sr-only">Открыть меню</span></button>
+      <nav class="navigation" id="site-navigation" aria-label="Основная навигация">
+        <div class="dropdown">
+          <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="services-menu">Услуги <svg class="icon"><use href="#i-chevron"/></svg></button>
+          <div class="dropdown-panel services-menu" id="services-menu" hidden>
+            <a href="#voice-agents"><span class="icon-tile"><svg class="icon"><use href="#i-mic"/></svg></span><span><strong>Голосовые ИИ-агенты</strong><small>Звонки, запись и первые ответы</small></span><svg class="icon"><use href="#i-arrow"/></svg></a>
+            <a href="#conversational"><span class="icon-tile"><svg class="icon"><use href="#i-chat"/></svg></span><span><strong>Диалоговые ИИ-ассистенты</strong><small>Общение с клиентами в чатах</small></span><svg class="icon"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="company-menu">Компания <svg class="icon"><use href="#i-chevron"/></svg></button>
+          <div class="dropdown-panel" id="company-menu" hidden><a href="#about">О компании</a><a href="#contacts">Контакты</a></div>
+        </div>
+        <div class="dropdown">
+          <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="resources-menu">Ресурсы <svg class="icon"><use href="#i-chevron"/></svg></button>
+          <div class="dropdown-panel" id="resources-menu" hidden><a href="#use-cases">Сценарии применения</a></div>
+        </div>
+        <a class="nav-link" href="#pricing">Тарифы</a>
+        <a class="button mobile-consultation" href="#contacts">Обсудить задачу</a>
       </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Включить светлую тему" aria-pressed="false"><svg class="icon"><use href="#i-sun"/></svg></button>
+        <a class="button header-consultation" href="#contacts">Обсудить задачу</a>
+      </div>
     </div>
   </header>
+
   <main>
-    <section id="home" class="hero container">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="status-dot"></span> Частный специалист для вашего бизнеса</p>
-        <h1>Ваш бизнес на Авито.<br><span>С вниманием<br>к каждому обращению.</span></h1>
-        <p class="lead">Помогаю оформить и продвигать объявления, разобраться в статистике и подключить ИИ-ассистента для первых ответов покупателям.</p>
-        <a class="button" href="#contacts">Обсудить задачу <span aria-hidden="true">↗</span></a>
-        <p class="hero-note">От понятного объявления — к удобному диалогу с клиентом</p>
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="badge"><span class="status-dot"></span> Автоматизация бизнеса с ИИ</p>
+          <h1 id="hero-title">ИИ-агенты для<br><span class="gradient-text">вашего бизнеса</span><br>24/7</h1>
+          <p class="hero-description">От голосовых администраторов до диалоговых ассистентов — проектируем, создаём и поддерживаем ИИ-решения под ваши рабочие процессы.</p>
+          <a class="button button-pill" href="#contacts">Бесплатная консультация <svg class="icon"><use href="#i-arrow"/></svg></a>
+          <div class="hero-stats" aria-label="Учебные показатели">
+            <div><strong class="gradient-text">50+</strong><span>Автоматизаций</span></div>
+            <div><strong class="gradient-text">24/7</strong><span>Работа агентов</span></div>
+            <div><strong class="gradient-text">3–5×</strong><span>Пример окупаемости</span></div>
+          </div>
+          <p class="demo-note">Учебные показатели, не результаты компании.</p>
+        </div>
+        <div class="orbit-visual" role="img" aria-label="Голосовой агент, синхронизация с CRM, запись клиентов и квалификация обращений связаны в единую систему">
+          <div class="orbit-glow"></div>
+          <div class="orbit orbit-outer"><i class="orbit-dot dot-one"></i><i class="orbit-dot dot-two"></i></div>
+          <div class="orbit orbit-inner"><i class="orbit-dot dot-three"></i><i class="orbit-dot dot-four"></i></div>
+          <span class="orbit-label label-voice">Голосовой агент</span><span class="orbit-label label-crm">Синхронизация CRM</span>
+          <span class="orbit-label label-book">Запись клиентов</span><span class="orbit-label label-lead">Оценка обращений</span>
+          <span class="star star-one"></span><span class="star star-two"></span><span class="star star-three"></span>
+        </div>
       </div>
-      <figure class="portrait">
-        <div class="portrait-top"><span>Давайте знакомиться</span><span aria-hidden="true">✳</span></div>
-        <img src="assets/portrait-placeholder.svg" alt="Место для будущего портрета Артура" width="440" height="440">
-        <figcaption><div><strong>Артур</strong><span>Авитолог · ИИ-ассистенты</span></div><span class="photo-label">Здесь будет моё фото</span></figcaption>
-      </figure>
     </section>
-    <div class="specialties"><div class="container specialties-inner"><span>Продвижение на Авито</span><span aria-hidden="true">✳</span><span>Понятная аналитика</span><span aria-hidden="true">✳</span><span>ИИ для обращений</span></div></div>
-    <section id="services" class="section container">
-      <div class="section-heading"><div><p class="eyebrow">01 / Чем могу помочь</p><h2>Объявления привлекают.<br>Диалог продолжается.</h2></div><p>Работаю с подачей, продвижением и обработкой обращений. Можно начать с одной задачи.</p></div>
-      <div class="services-grid">
-        <article class="service-card"><span class="card-number">01</span><h3>Оформление<br>объявлений</h3><p>Структура, заголовки, тексты и рекомендации по фотографиям. Выделяем главное, чтобы покупатель понял ваше предложение.</p><span class="tag">Понятная подача</span></article>
-        <article class="service-card"><span class="card-number">02</span><h3>Настройка<br>продвижения</h3><p>Подбор инструментов Авито под задачу и бюджет. Оптимизация объявлений и корректировка подхода по ходу работы.</p><span class="tag">Внимание к бюджету</span></article>
-        <article class="service-card"><span class="card-number">03</span><h3>Анализ<br>статистики</h3><p>Изучение просмотров, контактов и расходов. Понятный разбор того, что происходит и что стоит проверить дальше.</p><span class="tag">Решения на основе данных</span></article>
-        <article class="service-card service-accent"><span class="card-number">04</span><h3>ИИ-ассистент<br>для обращений</h3><p>Настройка ответов на типовые вопросы, сбора информации от покупателей и передачи диалога человеку в нужный момент.</p><span class="tag">Без потери внимания</span></article>
+
+    <section class="numbers-section" aria-label="Демонстрационные возможности">
+      <div class="container numbers-grid">
+        <div><strong class="gradient-text">50+</strong><span>Автоматизаций создано</span></div>
+        <div><strong class="gradient-text">98%</strong><span>Удовлетворённость клиентов</span></div>
+        <div><strong class="gradient-text">24/7</strong><span>Работа ИИ-агентов</span></div>
+        <div><strong class="gradient-text">3–5×</strong><span>Пример окупаемости</span></div>
+        <div><strong class="gradient-text">&lt;48ч</strong><span>Пример времени ответа</span></div>
+      </div>
+      <p class="demo-note text-center">Демонстрационные данные для учебного макета. Не обещание результата.</p>
+    </section>
+
+    <section class="integrations-section" aria-labelledby="integrations-title">
+      <div class="container text-center"><p class="eyebrow" id="integrations-title">Работаем с вашими инструментами</p><p class="section-caption">Примеры платформ, с которыми можно спроектировать интеграцию.</p></div>
+      <div class="integrations-window"><div class="integration-row"><span>n8n</span><span>Gusto</span><span>FreshBooks</span><span>Constant Contact</span><span>Drip</span><span>Mailchimp</span><span>Freshdesk</span><span>Zoho CRM</span><span>Trello</span><span>Make</span><span>Zapier</span><span>Intercom</span><span>Slack</span><span>HubSpot</span></div><div class="integration-row"><span>Google Sheets</span><span>Jira</span><span>Asana</span><span>DocuSign</span><span>Xero</span><span>ActiveCampaign</span><span>Monday.com</span><span>Klaviyo</span><span>Notion</span><span>ClickUp</span><span>Basecamp</span><span>WooCommerce</span><span>BigCommerce</span></div></div>
+    </section>
+
+    <section class="section problems-section" id="use-cases" aria-labelledby="problems-title">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">Задачи, которые решаем</p><h2 id="problems-title">Теряете время или деньги?<br>ИИ поможет это изменить.</h2></div><p class="heading-description">Повседневные задачи, которые ИИ-агенты помогают выполнять без лишней рутины.</p></div>
+        <div class="problems-grid">
+          <article class="problem-card problem-tall"><span class="icon-tile"><svg class="icon"><use href="#i-missed"/></svg></span><h3>Пропущенные звонки —<br>упущенные возможности</h3><p>ИИ-агент отвечает на звонки, собирает информацию и помогает записаться — даже после окончания рабочего дня.</p></article>
+          <article class="problem-card"><span class="icon-tile"><svg class="icon"><use href="#i-clock"/></svg></span><h3>Рутина отнимает<br>время команды</h3><p>Одни и те же вопросы, уточнения и напоминания. Ассистент берёт типовые диалоги на себя, а команда занимается важным.</p></article>
+          <article class="problem-card"><span class="icon-tile"><svg class="icon"><use href="#i-team"/></svg></span><h3>Поддержка не справляется<br>с потоком обращений</h3><p>Диалоговый ИИ помогает отвечать клиентам в чатах, уточнять запросы и передавать сложные вопросы специалисту.</p></article>
+          <article class="problem-card"><span class="icon-tile"><svg class="icon"><use href="#i-chart"/></svg></span><h3>Клиенты уходят,<br>пока ждут ответа</h3><p>Агент отвечает на типовые вопросы, выясняет потребности и передаёт информацию в CRM без ручного ввода.</p></article>
+          <article class="problem-card"><span class="icon-tile"><svg class="icon"><use href="#i-expand"/></svg></span><h3>Больше обращений —<br>больше ручной работы</h3><p>ИИ помогает обрабатывать растущий поток запросов. Объём автоматизации и условия передачи человеку определяем заранее.</p></article>
+        </div>
       </div>
     </section>
-    <section id="pricing" class="section pricing-section">
-      <div class="container"><div class="section-heading"><div><p class="eyebrow">02 / Форматы сотрудничества</p><h2>Выберите точку старта</h2></div><p>Демонстрационные цены для учебного сайта. Итоговая стоимость и состав работ согласуются отдельно.</p></div>
-      <div class="pricing-grid">
-        <article class="price-card"><p class="plan-label">Разобраться и подготовиться</p><h3>Старт</h3><p class="price">5 000 <span>₽ / разово</span></p><p class="price-caption">Демонстрационная цена</p><ul><li>Разбор текущих объявлений</li><li>Рекомендации по оформлению</li><li>Оптимизация одного объявления</li><li>План дальнейших действий</li></ul><a class="button button-outline" href="#contacts">Обсудить старт <span aria-hidden="true">↗</span></a></article>
-        <article class="price-card featured"><p class="plan-label">Системная работа с объявлениями</p><h3>Продвижение</h3><p class="price">15 000 <span>₽ / месяц</span></p><p class="price-caption">Демонстрационная цена</p><ul><li>Оформление и оптимизация</li><li>Настройка продвижения</li><li>Анализ статистики</li><li>Регулярные корректировки</li></ul><a class="button" href="#contacts">Обсудить продвижение <span aria-hidden="true">↗</span></a></article>
-        <article class="price-card"><p class="plan-label">Помощь в обработке обращений</p><h3>ИИ-ассистент</h3><p class="price">10 000 <span>₽ / разово</span></p><p class="price-caption">Демонстрационная цена</p><ul><li>Разбор типовых вопросов</li><li>Подготовка базы ответов</li><li>Сценарий сбора информации</li><li>Настройка и проверка диалогов</li></ul><a class="button button-outline" href="#contacts">Обсудить ассистента <span aria-hidden="true">↗</span></a></article>
-      </div><p class="pricing-note">Бюджет продвижения на Авито и расходы на сторонние ИИ-сервисы оплачиваются отдельно. На этом сайте подключений и оплаты нет.</p></div>
+
+    <section class="section services-section" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">Что создаём</p><h2 id="services-title">ИИ-агенты под ваши<br>рабочие процессы</h2></div><p class="heading-description">Начинаем с понимания вашего бизнеса. Затем создаём и поддерживаем решение, которое вписывается в его работу.</p></div>
+        <div class="services-grid">
+          <article class="service-card" id="voice-agents">
+            <span class="service-badge">Голос и телефония</span>
+            <span class="icon-tile icon-tile-large"><svg class="icon"><use href="#i-mic"/></svg></span>
+            <h3>Голосовые ИИ-агенты</h3><p>Виртуальные администраторы: отвечают на звонки, уточняют запросы, помогают с записью и передают информацию в CRM.</p><blockquote>«Вы позвонили в компанию. Я ИИ-ассистент. Чем могу помочь?»</blockquote>
+            <div class="service-demo voice-demo" aria-hidden="true"><div class="demo-topline"><span class="status-dot"></span> Входящий звонок <span class="demo-time">00:24</span></div><div class="waveform"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="demo-bottomline"><svg class="icon"><use href="#i-check"/></svg> Запрос уточнён <span>Демонстрация</span></div></div>
+            <a class="text-link" href="#contacts">Обсудить голосового агента <svg class="icon"><use href="#i-arrow"/></svg></a>
+          </article>
+          <article class="service-card" id="conversational">
+            <span class="service-badge">Чаты и поддержка</span>
+            <span class="icon-tile icon-tile-large"><svg class="icon"><use href="#i-chat"/></svg></span>
+            <h3>Диалоговые ИИ-ассистенты</h3><p>Умные помощники для сайта, SMS и мессенджеров. Отвечают по базе знаний, собирают информацию и помогают клиентам сделать следующий шаг.</p><blockquote>Меньше повторяющихся вопросов. Больше внимания к сложным задачам.</blockquote>
+            <div class="service-demo chat-demo" aria-hidden="true"><span class="chat-bubble bubble-user">Можно записаться на консультацию?</span><span class="chat-bubble bubble-agent">Конечно. Какой вопрос хотите обсудить?</span><div class="demo-bottomline"><span class="typing-dots">•••</span> Ассистент в диалоге <span>Демонстрация</span></div></div>
+            <a class="text-link" href="#contacts">Обсудить диалогового ассистента <svg class="icon"><use href="#i-arrow"/></svg></a>
+          </article>
+        </div>
+      </div>
     </section>
-    <section id="process" class="section container">
-      <div class="section-heading"><div><p class="eyebrow">03 / Как работаю</p><h2>От знакомства<br>до понятного плана</h2></div><p>Сначала разбираемся в задаче. Затем согласуем действия, сроки и способ оценить результат.</p></div>
-      <div class="steps"><article><span>01</span><h3>Знакомимся</h3><p>Обсуждаем бизнес, клиентов, ваши цели и текущую ситуацию на Авито.</p></article><article><span>02</span><h3>Согласуем план</h3><p>Определяем объём работ, бюджет, сроки и необходимые доступы.</p></article><article><span>03</span><h3>Настраиваем</h3><p>Готовим объявления и продвижение или сценарии ИИ-ассистента.</p></article><article><span>04</span><h3>Анализируем</h3><p>Проверяем статистику и диалоги, обсуждаем выводы и следующие шаги.</p></article></div>
+
+    <section class="section process-section" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <div class="center-heading"><p class="eyebrow">Как это работает</p><h2 id="process-title">Создаём и поддерживаем.<br class="mobile-break"> Так устроена работа.</h2><p class="section-caption">Не просто собираем и передаём. Проектируем, запускаем и улучшаем.</p></div>
+        <div class="steps-grid">
+          <article class="step"><span class="step-number">01</span><div class="step-title"><span class="icon-tile"><svg class="icon"><use href="#i-search"/></svg></span><h3>Изучаем</h3></div><p>Разбираем процессы, инструменты и обращения клиентов. Находим задачи, где автоматизация будет полезна.</p></article>
+          <article class="step"><span class="step-number">02</span><div class="step-title"><span class="icon-tile"><svg class="icon"><use href="#i-build"/></svg></span><h3>Создаём</h3></div><p>Проектируем голосового или диалогового агента и связываем его с нужными системами.</p></article>
+          <article class="step"><span class="step-number">03</span><div class="step-title"><span class="icon-tile"><svg class="icon"><use href="#i-rocket"/></svg></span><h3>Запускаем</h3></div><p>Тестируем сценарии, проверяем ответы и правила передачи человеку. Готовим решение к работе.</p></article>
+          <article class="step"><span class="step-number">04</span><div class="step-title"><span class="icon-tile"><svg class="icon"><use href="#i-monitor"/></svg></span><h3>Поддерживаем</h3></div><p>Следим за работой, разбираем диалоги и обновляем сценарии. Помогаем агенту оставаться полезным.</p></article>
+        </div>
+      </div>
     </section>
-    <section id="principles" class="section principles-section"><div class="container principles-layout"><div><p class="eyebrow">04 / Мои обязательства</p><h2>Спокойно.<br>Прозрачно.<br><span>По договорённости.</span></h2><p class="principles-intro">Хорошая работа начинается с ясных ожиданий и открытого диалога.</p></div><div class="principles-list"><article><span>01</span><div><h3>Согласованный объём работ</h3><p>Фиксируем задачи и сроки до старта. Дополнительные работы обсуждаем отдельно.</p></div></article><article><span>02</span><div><h3>Понятная связь и отчётность</h3><p>Объясняю действия простыми словами и показываю, на какие данные опираюсь.</p></div></article><article><span>03</span><div><h3>Бережное отношение к доступам</h3><p>Запрашиваю только необходимое. Права доступа и порядок работы согласуем с вами.</p></div></article><article><span>04</span><div><h3>Реалистичные ожидания</h3><p>Не обещаю фиксированное количество заявок. Для ИИ заранее определяем границы ответов и передачу человеку.</p></div></article></div></div></section>
-    <section id="cases" class="section container"><div class="section-heading"><div><p class="eyebrow">05 / Практика</p><h2>Будущие кейсы</h2></div></div><div class="cases-placeholder"><span class="case-symbol" aria-hidden="true">↗</span><div><h3>Раздел готовится</h3><p>Здесь появятся реальные задачи, ход работы и результаты — с разрешения клиентов.</p></div><span class="tag">Без выдуманных цифр</span></div></section>
-    <section id="contacts" class="contact-section"><div class="container contact-layout"><div><p class="eyebrow">06 / Давайте обсудим</p><h2>Начнём с задачи<br>вашего бизнеса<span>?</span></h2><p>Расскажите, что вы продаёте, как сейчас работаете с Авито и где нужна помощь.</p></div><div class="contact-card"><span class="status-dot"></span><h3>Контакты скоро появятся</h3><p>Это первая версия сайта. Артур ещё не добавил телефон, почту и мессенджеры.</p><p>Когда контакты будут готовы, здесь появится удобный способ связаться напрямую.</p><span class="contact-note">Контактные данные посетителей не собираются.</span></div></div></section>
+
+    <section class="section pricing-section" id="pricing" aria-labelledby="pricing-title">
+      <div class="container pricing-container">
+        <div class="center-heading"><p class="eyebrow">Тарифы</p><h2 id="pricing-title">Понятные цены на <span class="gradient-text">полезные решения</span></h2><p class="section-caption">Каждый формат включает проектирование, создание, запуск и поддержку.<br>Без скрытых условий.</p><p class="pricing-demo-label">Учебные цены из референса · суммы в долларах США (USD)</p></div>
+        <div class="pricing-grid">
+          <article class="price-card">
+            <h3>Голосовой агент: старт</h3><p class="plan-description">Один рабочий голосовой агент для основных задач бизнеса.</p>
+            <p class="price">От <strong>$3,000</strong><span>разовая настройка</span></p><p class="maintenance">От <strong>$500</strong><span> / мес. за поддержку</span></p>
+            <ul class="features"><li>1 голосовой ИИ-агент</li><li>До 2 интеграций</li><li>Маршрутизация звонков и запись</li><li>Работа на вашей телефонии и ИИ-сервисах</li><li>Базовый мониторинг и уведомления</li></ul>
+            <a class="button button-secondary" href="#contacts">Начать <svg class="icon"><use href="#i-arrow"/></svg></a>
+          </article>
+          <article class="price-card featured">
+            <span class="popular-label">Популярный формат</span><h3>Голосовой агент: рост</h3><p class="plan-description">Для нескольких направлений, филиалов и сценариев работы.</p>
+            <p class="price">От <strong>$5,000</strong><span>разовая настройка</span></p><p class="maintenance">От <strong>$1,000</strong><span> / мес. за поддержку</span></p>
+            <ul class="features"><li>До 3 голосовых ИИ-агентов</li><li>До 5 интеграций</li><li>Свои сценарии и правила принятия решений</li><li>Облачная или собственная инфраструктура</li><li>Мониторинг в реальном времени</li></ul>
+            <a class="button" href="#contacts">Начать <svg class="icon"><use href="#i-arrow"/></svg></a>
+          </article>
+          <article class="price-card">
+            <h3>Индивидуальное решение</h3><p class="plan-description">Диалоговый ассистент или комплексное решение под процессы вашей компании.</p>
+            <p class="price custom-price"><strong>По запросу</strong><span>стоимость проекта</span></p><p class="maintenance">Поддержка <span>по договорённости</span></p>
+            <ul class="features"><li>Голосовые и диалоговые ИИ-агенты</li><li>Интеграции с нужными системами</li><li>Размещение на выбранной инфраструктуре</li><li>Несколько каналов общения</li><li>Согласованные правила реагирования</li></ul>
+            <a class="button button-secondary" href="#contacts">Обсудить проект <svg class="icon"><use href="#i-arrow"/></svg></a>
+          </article>
+        </div>
+        <p class="pricing-footnote">Цены приведены для учебного макета и не являются офертой. Реальные условия ещё не определены. Стоимость телефонии, ИИ-платформ и сторонних сервисов в эти суммы не включена.</p>
+        <details class="pricing-details"><summary>Что ещё нужно знать о тарифах <svg class="icon"><use href="#i-chevron"/></svg></summary><div class="pricing-answers"><h3>Можно ли подключить агента на этом сайте?</h3><p>Нет. Это демонстрационный сайт: здесь нет телефонии, настоящих ИИ-агентов, оплаты или отправки заявок.</p><h3>Почему стоимость указана в долларах?</h3><p>Суммы и валюта сохранены из учебного референса. Пересчёт в рубли не выполнялся.</p><h3>Можно ли обсудить только диалогового ассистента?</h3><p>Да, такой формат показан в карточке индивидуального решения. Контакты для обсуждения будут добавлены позже.</p></div></details>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about" aria-labelledby="about-title">
+      <div class="container"><div class="about-card"><div class="about-emblem" aria-hidden="true">ИИ</div><div><p class="eyebrow">О компании</p><h2 id="about-title">За технологией —<br>понимание бизнеса</h2><p>«ИИ-решения» — учебный проект о том, как голосовые агенты и диалоговые ассистенты могут помогать в повседневной работе компании.</p><p>В основе подхода — понятная задача, продуманный сценарий и внимание к каждому этапу: от первого диалога до поддержки.</p><p class="about-note">Реальные сведения о команде и подтверждённые кейсы появятся позже.</p></div></div></div>
+    </section>
+
+    <section class="section contact-section" id="contacts" aria-labelledby="contact-title">
+      <div class="container"><div class="contact-card"><div><p class="eyebrow">Начнём с разговора</p><h2 id="contact-title">Пусть ИИ займётся<br>вашей рутиной</h2><p>Расскажите о своих процессах — вместе определим, где автоматизация может быть полезна.</p></div><div class="contact-action"><div class="contact-status"><span class="status-dot"></span> Контакты скоро появятся</div><p>Телефон, почту и мессенджеры добавим позже. Сейчас отправить заявку нельзя.</p><span class="contact-note">Учебный сайт · данные не собираются</span></div></div></div>
+    </section>
   </main>
-  <footer class="container footer"><a class="brand" href="#home">артур<span class="brand-dot">.</span></a><p>Авито · ИИ-ассистенты · Внимание к деталям</p><span>Учебный проект · <span id="year">2026</span></span></footer>
+
+  <footer class="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a class="logo" href="index.html">ИИ-решения<img src="assets/logo-mark.svg" alt="" width="29" height="26"></a><p>Автоматизация, которая помогает бизнесу работать без лишней рутины.</p><span>Голосовые агенты и диалоговые ассистенты</span></div><div><h2>Услуги</h2><a href="#voice-agents">Голосовые ИИ-агенты</a><a href="#conversational">Диалоговые ИИ-ассистенты</a></div><div><h2>Компания</h2><a href="#about">О компании</a><a href="#pricing">Тарифы</a><a href="#contacts">Контакты</a></div><div><h2>Ресурсы</h2><a href="#use-cases">Сценарии применения</a></div></div><div class="footer-bottom"><p>© <span id="year">2026</span> ИИ-решения. Учебный проект.</p><p>Демонстрация дизайна. Без оплаты, аналитики и настоящих ИИ-подключений.</p></div></div></footer>
+  <a class="floating-contact" href="#contacts" aria-label="Перейти к контактам"><svg class="icon"><use href="#i-headset"/></svg></a>
 </body>
 </html>
